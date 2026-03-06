@@ -1,0 +1,30 @@
+{
+  "grammars": [
+    {
+      "name": "filemaker",
+      "camelCase": false,
+      "scope": "source.filemaker",
+      "path": ".",
+      "file-types": ["fmfn"],
+      "highlights": "queries/highlights.scm",
+      "injection-regex": "^(filemaker|fm|fmfn)$"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "MIT",
+    "description": "Tree-sitter grammar for FileMaker Pro calculations",
+    "authors": [
+      {
+        "name": "Travis Witt"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/travisdwitt/tree-sitter-fm"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "node": true
+  }
+}

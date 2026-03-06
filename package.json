@@ -1,0 +1,39 @@
+{
+  "name": "tree-sitter-fm",
+  "version": "0.1.0",
+  "description": "Tree-sitter grammar for FileMaker Pro calculations",
+  "repository": "github:travisdwitt/tree-sitter-fm",
+  "license": "MIT",
+  "main": "bindings/node",
+  "keywords": [
+    "tree-sitter",
+    "parser",
+    "filemaker"
+  ],
+  "files": [
+    "grammar.js",
+    "binding.gyp",
+    "prebuilds/**",
+    "bindings/node/*",
+    "queries/*",
+    "src/**",
+    "*.wasm"
+  ],
+  "dependencies": {
+    "node-addon-api": "^8.0.0",
+    "node-gyp-build": "^4.8.0"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.25.0"
+  },
+  "tree-sitter": [
+    {
+      "scope": "source.filemaker",
+      "file-types": [
+        "fmfn"
+      ],
+      "highlights": "queries/highlights.scm",
+      "injection-regex": "^(filemaker|fm|fmfn)$"
+    }
+  ]
+}

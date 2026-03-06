@@ -1,0 +1,20 @@
+// Calculate the full name with proper formatting
+Let (
+  [
+    $firstName = Trim ( Contact::FirstName ) ;
+    $lastName = Trim ( Contact::LastName ) ;
+    $$fullName = $firstName & " " & $lastName
+  ] ;
+
+  Case (
+    IsEmpty ( $firstName ) and IsEmpty ( $lastName ) ; "Unknown" ;
+    IsEmpty ( $firstName ) ; $lastName ;
+    IsEmpty ( $lastName ) ; $firstName ;
+    $$fullName
+  )
+)
+
+/*
+  Multi-line comment example
+  This is a FileMaker calculation
+*/
