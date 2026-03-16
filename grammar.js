@@ -332,7 +332,8 @@ module.exports = grammar({
     literal_text: $ => '¶',
 
     // Base identifier (used for word rule and field names)
-    _identifier: $ => /[a-zA-Z_][a-zA-Z0-9_.:]*/,
+    // Allows ~ prefix for FileMaker Let-scoped variable naming convention
+    _identifier: $ => /~?[a-zA-Z_][a-zA-Z0-9_.:]*/,
 
     // Comments
     line_comment: $ => seq('//', /[^\n]*/),
